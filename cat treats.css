@@ -1,0 +1,170 @@
+:root {
+  --background: rgb(8, 7, 7);
+  --background2: rgb(247, 232, 201);
+  --text-dark: rgb(8, 7, 7);
+  --text-light: rgb(247, 232, 201);
+  --accent-color: #6f432a;
+}
+
+/*header fonts*/
+@font-face {
+  font-family: bubbly;
+  src: url(fonts/SourGummy-ExtraBold.ttf);
+}
+
+/*text fonts*/
+@font-face {
+  font-family: lexend;
+  src: url(fonts/Lexend-Medium.ttf);
+}
+
+body {
+  background-color: var(--accent-color);
+  animation: fadeIn 1.5s ease forwards;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*home*/
+.home a {
+  text-decoration: none;
+}
+
+.home a img {
+  width: 4.5rem;
+  height: 4.5rem;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.home-image img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  display: block;
+  object-fit: cover;
+}
+
+/*Content*/
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 3.5rem;
+}
+
+.content h1 {
+  font-family: bubbly;
+  font-size: 4rem;
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+}
+
+.content p {
+  font-family: lexend;
+  font-size: 2rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+/*Product*/
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.product-container {
+  max-width: 2000px;
+  padding: 0rem 1rem;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 0rem 1rem;
+  text-align: center;
+}
+
+.product-item {
+  background-color: var(--background);
+  color: var(--text-light);
+  max-width: 2000px;
+  padding: 0rem 1rem;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 1.5rem;
+}
+
+.product-item img {
+  width: 50%;
+  height: auto;
+  margin: 0;
+  display: block;
+  object-fit: cover;
+}
+
+.product-item h2 {
+  position: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  font-family: bubbly;
+}
+
+@media screen and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(1, minmax(130px, 1fr));
+    gap: 1rem;
+  }
+
+  .product-item {
+    padding: 1rem;
+  }
+
+  .product-item img {
+    height: auto;
+    width: 50%px;
+  }
+
+  .product-item h2 {
+    font-size: 1.2rem;
+  }
+
+  .home a img {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+}

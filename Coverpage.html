@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png/x-icon"
+      sizes="10px 10px"
+      href="/Website for ITC Finals/images/white paws logo.png"
+    />
+    <link rel="stylesheet" href="Coverpage.css" />
+    <title>White Paws Shop</title>
+  </head>
+  <body>
+    <!--Cover Page-->
+    <div class="cover-container">
+      <div class="cover-welcome">
+        <div class="logo-container">
+          <img
+            src="/Website for ITC Finals/images/white paws logo.png"
+            alt="White Paws Logo"
+            class="logo"
+          />
+        </div>
+
+        <div class="welcome">
+          <h1 id="welcome-remark">
+            WELCOME TO <br /><span class="white-text">WHITE PAWS SHOP!</span>
+          </h1>
+          <p id="statement">Click the button below to enter our shop!</p>
+        </div>
+      </div>
+
+      <div class="button">
+        <a
+          href="/Website for ITC Finals/ITC Finals.html"
+          class="button-content"
+        >
+          <img
+            src="/Website for ITC Finals/images/white paws button.png"
+            alt="White Paws Button"
+            id="button-logo"
+          />
+          <h1 id="button-text">Enter the Shop</h1>
+        </a>
+      </div>
+    </div>
+    <div class="easter-egg">
+      <img src="/Website for ITC Finals/images/sonny injel 1.png" />
+      <img src="/Website for ITC Finals/images/sonny injel 2.png" />
+      <img src="/Website for ITC Finals/images/sonny injel 3.png" />
+      <img src="/Website for ITC Finals/images/sonny injel 4.png" />
+      <img src="/Website for ITC Finals/images/sonny injel 5.png" />
+      <img src="/Website for ITC Finals/images/vaclaz.jpg" />
+      <img src="/Website for ITC Finals/images/don quixote.gif" />
+    </div>
+    <script>
+      document
+        .querySelector(".button-content")
+        .addEventListener("click", (event) => {
+          event.preventDefault();
+          const coverContainer = document.querySelector(".cover-container");
+
+          coverContainer.classList.add("fade-out");
+
+          setTimeout(() => {
+            window.location.href = event.target.closest("a").href;
+          }, 1500);
+        });
+    </script>
+  </body>
+</html>

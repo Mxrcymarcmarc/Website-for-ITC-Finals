@@ -1,0 +1,177 @@
+:root {
+  --background: rgb(8, 7, 7);
+  --text-dark: rgb(8, 7, 7);
+  --text-light: rgb(247, 232, 201);
+  --accent-color: #ffffff;
+}
+
+/*span*/
+
+.white-text {
+  color: #fff;
+}
+
+.white-text:hover {
+  color: var(--text-light);
+}
+
+/*header fonts*/
+@font-face {
+  font-family: bubbly;
+  src: url(fonts/SourGummy-ExtraBold.ttf);
+}
+
+/*text fonts*/
+@font-face {
+  font-family: lexend;
+  src: url(fonts/Lexend-Medium.ttf);
+}
+
+body {
+  background-color: var(--background);
+}
+
+/*cover page*/
+.cover-container {
+  display: inline-block;
+  background-color: var(--background);
+  color: var(--text-light);
+  padding: 20vh;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+}
+
+.cover-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-family: bubbly;
+}
+
+.welcome p {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: lexend;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#button-logo {
+  width: 150px;
+  height: 150px;
+}
+
+#button-text {
+  font-size: 4rem;
+  text-decoration: none;
+  color: var(--accent-color);
+  font-family: lexend;
+}
+
+.button-content #button-text:hover {
+  color: var(--text-light);
+}
+
+.button-content:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  fill: var(--accent-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.cover-container {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.cover-container.fade-out {
+  animation: fadeOut 1.5s ease forwards;
+}
+
+@media screen and (max-width: 768px) {
+  .cover-container {
+    margin-top: 1%;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cover-welcome {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .welcome h1 {
+    font-size: 3rem;
+    padding: 0.5rem;
+  }
+
+  .welcome p {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
+
+  #button-logo {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  #button-text {
+    font-size: 1.5rem;
+  }
+}
+
+.easter-egg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.easter-egg img {
+  width: 1px;
+  height: 1px;
+}
